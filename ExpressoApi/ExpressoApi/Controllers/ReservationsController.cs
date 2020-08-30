@@ -21,7 +21,7 @@ namespace ExpressoApi.Controllers
         }
 
         [HttpPost]
-        public IActionResult Post(Reservation reservation)
+        public IActionResult Post([FromBody]Reservation reservation)
         {
             _expressoDbContext.Reservations.Add(reservation);
             _expressoDbContext.SaveChanges();
